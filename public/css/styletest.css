@@ -40,3 +40,22 @@ button{
     color: white;
     padding: 8px;
 }
+
+.progressbar{
+    position:fixed;
+    top:0;
+    right:0;
+    width:10px;
+    height:50%;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%,100%{
+        filter:hue-rotate(0deg);
+    } 
+    50%{
+        filter: hue-rotate(360deg);
+    }
+}
