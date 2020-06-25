@@ -3,6 +3,8 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
    
     #progressbar{
@@ -31,8 +33,38 @@
 {
     filter:blur(50px);
 }
-
+#header{
+    position: fixed;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #008aff, #00ffe7);
+    animation: animates 10s ;
+    background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-size: 64px;
+    height: 100%;
+}
+#header:before,
+#header:after{
+    content: '';
+    position: absolute;
+    width:20px;
+    height: 200%;
+    background: linear-gradient(to right, #008aff,#00ffe7);
+    filter: blur(10px);
+}
+#header:after{
+    filter: blur(50px);
+}
 @keyframes animate{
+    0%{
+        filter:hue-rotate(0deg);
+    } 
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes animates{
     0%{
         filter:hue-rotate(0deg);
     } 
@@ -43,12 +75,17 @@
 body{
     background-color: black;
 }
+
+
 </style>
 
 </head>
 
 <body>
     <div id="progressbar"></div>
+    <div id="header">
+        <h2 id="h2">Weather App</h2>
+    </div>
  
 </body>
 
